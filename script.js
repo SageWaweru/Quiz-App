@@ -19,7 +19,7 @@ dtime.addEventListener('click', () => setSelectedTime(10));
 function setSelectedTime(time) {
     selectedTime = time;
     quizTimer.innerHTML = `${selectedTime}`;
-    console.log(`Time set to: ${selectedTime}`);
+    
 };
 
 
@@ -27,7 +27,7 @@ function setSelectedTime(time) {
 const applyBTN = document.getElementById('apply');
 applyBTN.addEventListener('click', () => applySettings());
 function applySettings() {
-    console.log(`Selected Time: ${selectedTime} seconds`);
+setSelectedTime();
 }
 
 
@@ -52,4 +52,4 @@ function startTimer(){
 }
 
 const newGame= document.getElementById('new');
-newGame.addEventListener('click', () => startTimer);
+newGame.addEventListener('click', () => startTimer());
