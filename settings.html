@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="settings" id="settings">
+        <nav>
+            <ul>
+                <div>
+                    <li><a href="index.html"><img src="Images/home_6269272.png" alt="HOME"></a></li>
+                    <li><a href="leaderboard.html"><img src="Images/reward_6339698.png" alt="LEADERBOARD"></a></li>
+                    <li><a href="settings.html"><img src="Images/setting_6340153.png" alt="SETTINGS"></a></li>
+                </div>
+            </ul>
+        </nav>
+        <h2>SETTINGS</h2>
+        <button class="choice"><a href="instructions.html">HOW TO PLAY</a></button>
+        <form action="" onsubmit="event.preventDefault()">
+            <div class="pref">
+                <div class="d-topic">
+                    <button class="choice" onclick="topicDiffculty()">
+                        DIFFICULTY
+                    </button>
+                    <ul class="choices-difficulty" id="dMenu">
+                        <li class="level" id="easy">EASY</li>
+                        <li class="level" id="medium">MEDIUM</li>
+                        <li class="level" id="hard">HARD</li>
+                    </ul>
+                </div>
+                <div class="t-topic">
+                    <button class="choice" onclick="topicTimer()">
+                        TIMER
+                    </button>
+                    <ul class="choices-difficulty" id="tMenu">
+                        <li  class="time" id="60sec">60 SECONDS</li>
+                        <li  class="time" id="30sec">30 SECONDS</li>
+                        <li  class="time" id="10sec">10 SECONDS</li>
+                    </ul>
+                    
+                </div>
+                <button type="submit" id="apply">APPLY</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function topicDiffculty(){
+           const menu= document.getElementById("dMenu");
+           if(menu.style.display==="block"){
+               menu.style.display="none";
+           }
+           else{
+               menu.style.display="block";
+           }
+        }
+        function topicTimer(){
+           const Menu= document.getElementById("tMenu");
+           if(Menu.style.display==="block"){
+               Menu.style.display="none";
+           }
+           else{
+               Menu.style.display="block";
+           }
+        }
+
+       </script>
+       <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="home">
+        <nav>
+         <ul>
+            <div>
+                <li><a href="index.html"><img src="Images/home_6269272.png" alt="HOME"></a></li>
+                <li><a href="leaderboard.html"><img src="Images/reward_6339698.png" alt="LEADERBOARD"></a></li>
+                <li><a href="settings.html"><img src="Images/setting_6340153.png" alt="SETTINGS"></a></li>
+            </div>
+         </ul>
+        </nav>
+      
+            <form action=""  onsubmit="event.preventDefault()">
+                <div class="h-body">
+                    <h1>LETS PLAY!</h1>
+                    <div class="cTopic">
+                        <button class="choice" onclick="topicChoice()">
+                        CHOOSE YOUR TOPIC
+                        </button>
+                        <ul class="choices-topic" id="cMenu">
+                          <li class="topic" id="JS">Java Script </li>
+                          <li class="topic" id="CSS">CSS</li>
+                          <li class="topic" id="HTML">HTML</li>
+                        </ul>
+                    </div>
+                        <button type="submit" id="new"><a style="text-decoration: none; color: bisque;"
+                            href="quiz.html">NEW GAME</a></button>
+                </div>
+            </form>
+                <!-- <select name="" id="">
+                    <option value="">Java Script</option>
+                    <option value="">CSS</option>
+                    <option value="">HTML</option>
+                </select> -->
+           
+      
+    </div>
+    <script>
+     function topicChoice(){
+        const menu= document.getElementById("cMenu");
+        if(menu.style.display==="block"){
+            menu.style.display="none";
+        }
+        else{
+            menu.style.display="block";
+        }
+     }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
