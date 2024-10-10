@@ -168,131 +168,15 @@ ul li{
      background-color: rgb(121, 98, 173);
     box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
 } 
-/* settings styling */
-.settings{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(4, 4, 71);
-    width: 50vw;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
-    box-shadow:0 4px 5px rgba(64, 64, 179, 0.806); 
-}
-.settings img{
-    width: 7%;
-    float: right;
-    margin-left: .5rem;
-}
-
-.choice a{
-    text-decoration: none;
-    color: bisque;
-   
-}
-
-.settings h2{
-    color: rgb(142, 66, 157);
-}
-
-#apply{
-    margin: 2rem;
-    margin-left: 3rem;
-    background-color: rgb(77, 77, 171);
-    color: bisque;
-    border-radius: .3rem;
-    border: none;
-    width: 8rem;
-    height: 3rem;   
-}
-
-#apply:hover{
-    background-color: rgb(121, 98, 173);
-    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
-}
-
-#dMenu{
-    display: none;
-    background-color: rgb(77, 77, 171);
-    color: bisque;
-    width: 10rem;
-    height: 8rem;
-    padding-top: 1rem;
-
-}
-
-#tMenu{
-    display: none;
-    background-color: rgb(77, 77, 171);
-    color: bisque;
-    width: 10rem;
-    height: 8rem;
-    padding-top: 1rem;
-
-}
-
-.dTopic{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.tTopic{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.pref{
-    display: flex;
-    flex-direction: column;
-}
-
-.level{
-    margin-top: 1rem;
-    margin-right: 2rem;
-}
-
-.level:hover{
-    border:1px solid bisque;
-    text-align: center;
-    border-radius: .2rem;
-    background-color: rgb(121, 98, 173);
-    cursor: pointer;
-}
-
-.time{
-    margin-top: 1rem;
-    margin-right: 2rem;
-}
-
-.time:hover{
-    border:1px solid bisque;
-    text-align: center;
-    border-radius: .2rem;
-    background-color: rgb(121, 98, 173);
-    cursor: pointer;
-}
 
 /* quiz styling */
 .quiz{
     background-image: url(Images/quiz-background.jpeg);
     background-repeat: repeat; 
     background-size:cover;
-    /* position: fixed;
-    bottom: 0;
-    top: 0; */
     width: 50vw;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
-    /* overflow-y:visible; */
-    /* align-items: center;
-    justify-content: center; */
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806);
@@ -325,22 +209,11 @@ ul li{
     font-size: 2rem;
 }
 
-.q-icon{
-    display: flex;
-}
-
-.q-icon img{
-    width: 1.5rem;
-    margin-right: .5rem;
-}
-
-
 .questions{
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
-    /* align-items: center;
-    justify-content: center; */
+   
 }
 
 .timer{
@@ -382,18 +255,6 @@ ul li{
     color: bisque;
     font-size: 1rem;
     font-weight: 500;
-}
-
-.number{
-    color: rgb(173, 165, 156);
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 2rem;
-}
-
-.total-q{
-    color: rgba(173, 165, 156, 0.386);
-    font-size: 1.2rem;
 }
 
 .question{
@@ -442,7 +303,7 @@ transition: 0.3s linear;
 
 .n-btn:hover{
     background-color: rgb(121, 98, 173);
-    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
+    box-shadow: 0 4px 5px rgba(33, 33, 60, 0.5);
 }
 
 /* scoreboard styling */
@@ -455,7 +316,6 @@ transition: 0.3s linear;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(4, 4, 71); */
     width: 50vw;
     height: 60vh;
     margin-top: 2rem;
@@ -489,30 +349,6 @@ transition: 0.3s linear;
 #p-btn:hover{
     background-color: rgb(121, 98, 173);
     box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
-}
-
-
-.ranking{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.player-name{
-    color: rgb(142, 66, 157);
-    font-size: 2rem;
-}
-
-.top-p{
-    border-bottom: 2px solid rgb(173, 165, 156);
-}
-
-.p-score{
-    color:rgb(173, 165, 156);
-    font-size: 1.5rem;
-}
-
-.other-p{
-    margin-left: 2rem;
 }
 
 /* instructions styling */
@@ -561,9 +397,6 @@ h3{
     .home{
         width: 100vw;
     }
-    #settings{
-        width: 100vw;
-    }
 
     #quiz{
         width: 100vw;  
@@ -572,11 +405,6 @@ h3{
     #progress{
         width: 60vw;
     }
-
-    #hint img{
-        width: 1.5rem;
-    }
-    
     .answer{
         width: 75vw;
     }
