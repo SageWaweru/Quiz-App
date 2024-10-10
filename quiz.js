@@ -36,8 +36,8 @@ function displayQuestion() {
 
     answerChoices.forEach((choice, index) => {
         const choiceText = choice.querySelector('.text'); 
-        if (currentQuestion.PossibleAnswers[index]) {
-            choiceText.textContent = currentQuestion.possiblAnswers[index];
+        if (currentQuestion.possibleAnswers[index]) {
+            choiceText.textContent = currentQuestion.possibleAnswers[index];
             choice.style.display = ''; 
         } else {
             choice.style.display = 'none'; 
@@ -73,7 +73,7 @@ function selectAnswer(index) {
         score++;
         alert("Correct!");
     } else {
-        alert("Wrong answer! The correct answer was: " + currentQuestion.possibleAnswers[currentQuestion.correctAnswr]);
+        alert("Wrong answer! The correct answer was: " + currentQuestion.possibleAnswers[currentQuestion.correctAnswer]);
     }
     clearInterval(timer);
     currentQuestionIndex++;
