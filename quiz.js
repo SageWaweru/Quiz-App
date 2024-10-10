@@ -11,7 +11,7 @@ const quizTimer = document.querySelector('.progress-text');
 const currentQuestion = document.querySelector('.current-q');
 const questionDisplay = document.querySelector('.question')
 const questionContainer = document.querySelector('.question-box');
-const answerChoices = document.querySelector('.answer .text');
+const answerChoices = document.querySelector('.answer');
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -30,15 +30,17 @@ function initializeQuiz() {
 
 
 function displayQuestion() {
-    currentQuestion = questions[level][currentQuestionIndex];
-    questionDisplay.textContent = currentQuestion.question;
-    
+    const currentQuestion = shuffledQuestions[currentQuestionIndex];
+    questionContainer.textContent = currentQuestion.question;
+    currentQuestion.innerHTML = `${currentQuestionIndex + 1} / ${shuffledQuestions.length}`;
+
     answerChoices.forEach((choice, index) => {
+        const choiceText = choice.querySelector('.text'); 
         if (currentQuestion.answers[index]) {
-            choice.textContent = currentQuestion.answers[index];
-            choice.parentElement.style.display = ''; 
+            choiceText.textContent = currentQuestion.answers[index];
+            choice.style.display = ''; 
         } else {
-            choice.parentElement.style.display = 'none'; 
+            choice.style.display = 'none'; 
         }
     });
 
