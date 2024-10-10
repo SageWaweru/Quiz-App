@@ -36,8 +36,8 @@ function displayQuestion() {
 
     answerChoices.forEach((choice, index) => {
         const choiceText = choice.querySelector('.text'); 
-        if (currentQuestion.answers[index]) {
-            choiceText.textContent = currentQuestion.answers[index];
+        if (currentQuestion.PossibleAnswers[index]) {
+            choiceText.textContent = currentQuestion.possiblAnswers[index];
             choice.style.display = ''; 
         } else {
             choice.style.display = 'none'; 
@@ -69,11 +69,11 @@ function progress(time) {
 
 function selectAnswer(index) {
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
-    if (index === currentQuestion.correct) {
+    if (index === currentQuestion.correctAnswer) {
         score++;
         alert("Correct!");
     } else {
-        alert("Wrong answer! The correct answer was: " + currentQuestion.answers[currentQuestion.correct]);
+        alert("Wrong answer! The correct answer was: " + currentQuestion.possibleAnswers[currentQuestion.correctAnswr]);
     }
     clearInterval(timer);
     currentQuestionIndex++;
