@@ -1,59 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body >
+
+<body>
     <div class="home">
         <nav>
-         <ul>
-            <div>
-                <li><a href="index.html"><img src="Images/home_6269272.png" alt="HOME"></a></li>
-                <li><a href="leaderboard.html"><img src="Images/reward_6339698.png" alt="LEADERBOARD"></a></li>
-                <li><a href="settings.html"><img src="Images/setting_6340153.png" alt="SETTINGS"></a></li>
-            </div>
-         </ul>
+            <ul>
+                <div>
+                    <li><a href="index.html"><img src="Images/home_6269272.png" alt="HOME"></a></li>
+                    <li><a href="leaderboard.html"><img src="Images/reward_6339698.png" alt="LEADERBOARD"></a></li>
+                    <li><a href="instructions.html"><img src="Images/question_6340565.png" alt="HELP"></a></li>
+                </div>
+            </ul>
         </nav>
-      
-            <form action=""  onsubmit="event.preventDefault()">
-                <div class="h-body">
-                    <h1>LETS PLAY!</h1>
-                    <div class="cTopic">
-                        <button class="choice" onclick="topicChoice()">
+
+        <form action="" onsubmit="event.preventDefault()">
+            <div class="h-body">
+                <h1>LETS PLAY!</h1>
+                <div class="cTopic">
+                    <button class="choice" onclick="topicChoice()">
                         CHOOSE YOUR TOPIC
-                        </button>
-                        <ul class="choices-topic" id="cMenu">
+                    </button>
+                    <div class="level-btns" id="cMenu">
+                         LEVEL:EASY
+                        <a href="quiz.html?level=htmleasy" class="btn">HTML</a>
+                        <a href="quiz.html?level=csseasy" class="btn">CSS</a>
+                        <a href="quiz.html?level=jseasy" class="btn">Javascript</a>
+                         LEVEL:MEDIUM
+                        <a href="quiz.html?level=htmlmedium" class="btn">HTML </a>
+                        <a href="quiz.html?level=cssmedium" class="btn">CSS </a>
+                        <a href="quiz.html?level=jsmedium" class="btn">Javascript </a>
+                         LEVEL:HARD
+                        <a href="quiz.html?level=htmlhard" class="btn">HTML </a>
+                        <a href="quiz.html?level=csshard" class="btn">CSS</a>
+                        <a href="quiz.html?level=jshard" class="btn">Javascript</a>
+                    </div>
+                    <!-- <ul class="choices-topic" >
                           <li class="topic" id="JS">Java Script </li>
                           <li class="topic" id="CSS">CSS</li>
                           <li class="topic" id="HTML">HTML</li>
-                        </ul>
-                    </div>
-                        <button type="submit" id="new"><a style="text-decoration: none; color: bisque;"
-                            href="quiz.html">NEW GAME</a></button>
+                        </ul> -->
                 </div>
-            </form>
-                <!-- <select name="" id="">
+                
+            </div>
+        </form>
+        <!-- <select name="" id="">
                     <option value="">Java Script</option>
                     <option value="">CSS</option>
                     <option value="">HTML</option>
                 </select> -->
-           
-      
+
+
     </div>
     <script>
-     function topicChoice(){
-        const menu= document.getElementById("cMenu");
-        if(menu.style.display==="block"){
-            menu.style.display="none";
+        function topicChoice() {
+            const menu = document.getElementById("cMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            }
+            else {
+                menu.style.display = "flex";
+            }
         }
-        else{
-            menu.style.display="block";
-        }
-     }
     </script>
     <script src="script.js"></script>
 </body>
+
 </html>

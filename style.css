@@ -23,6 +23,7 @@ ul li{
     bottom: 0;
     top: 0;
     width: 50vw;
+    height: 100vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
@@ -48,8 +49,29 @@ ul li{
     background-color: rgb(77, 77, 171);
     color: bisque;
     width: 10rem;
-    height: 8rem;
+    height: 50vh;
+    margin-top: .2rem;
+    
+}
 
+.level-btns{
+    display: flex;
+    flex-direction: column;   
+    align-items: center; 
+
+   
+}
+
+.btn{
+    text-decoration: none;
+    color: bisque;
+    background-color: rgb(121, 98, 173);
+    width: 6rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
 }
 
 .topic{
@@ -57,12 +79,11 @@ ul li{
     margin-right: 2rem;
 }
 
-.topic:hover{
+.btn:hover{
     border:1px solid bisque;
-    text-align: center;
-    border-radius: .2rem;
-    background-color: rgb(121, 98, 173);
-}
+     background-color: rgb(121, 98, 173);
+    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
+} 
 
 .h-body{
     display: flex;
@@ -98,20 +119,6 @@ ul li{
     cursor: pointer;
 }
 
-#new{
-    margin-top: 1rem;
-    background-color: rgb(77, 77, 171);
-    color: bisque;
-    border-radius: .3rem;
-    border: none;
-    width: 15rem;
-    height: 3rem;   
-}
-
-#new:hover{
-    background-color: rgb(121, 98, 173);
-    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
-}
 
 /* settings styling */
 .settings{

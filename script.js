@@ -1,55 +1,96 @@
-// import questions from 'quizquestions.js';
-const topic = document.querySelector('.topic');
-const difficulty = document.querySelector('.level');
-const time = document.querySelector('.time');
+const urlParams = new URLSearchParams(window.location.search);
+const level = urlParams.get('level') || 'htmleasy';
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let selectedTime=60;
+
+
 const quizProgress = document.querySelector('.progress-bar');
 const quizTimer = document.querySelector('.progress-text');
 const currentQuestion = document.querySelector('.current-q');
-const questionContainer = document.querySelector('.question');
-const answer = document.querySelector('.answer-box');
-const etime = document.getElementById('60sec');
-const mtime = document.getElementById('30sec');
-const dtime = document.getElementById('10sec');
-let selectedTime = 60;
+const questionDisplay = document.querySelector('.question')
+const questionContainer = document.querySelector('.question-box');
+const answerChoices = document.querySelector('.answer .text');
 
-etime.addEventListener('click', () => setSelectedTime(60));
-mtime.addEventListener('click', () => setSelectedTime(30));
-dtime.addEventListener('click', () => setSelectedTime(10));
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; 
+    }
+}
 
-function setSelectedTime(time) {
-    selectedTime = time;
-    quizTimer.innerHTML = `${selectedTime}`;
+let shuffledQuestions = [];
+
+function initializeQuiz() {
+    shuffledQuestions = [...questions[level]]; 
+    shuffle(shuffledQuestions); 
+    displayQuestion();
+}
+
+
+function displayQuestion() {
+    currentQuestion = questions[level][currentQuestionIndex];
+    questionDisplay.textContent = currentQuestion.question;
     
-};
-
-
-
-const applyBTN = document.getElementById('apply');
-applyBTN.addEventListener('click', () => applySettings());
-function applySettings() {
-setSelectedTime();
-}
-
-
-function progress(t) {
-    const percentage = (t / selectedTime) * 100;
-    quizProgress.style.width = `${percentage}%`;
-    quizTimer.innerHTML = `${t}`;
-}
-
-function startTimer(){
-    let timeLeft = selectedTime;
-
-    const timerInterval = setInterval(() => {
-        if (timeLeft <= 0) {
-            clearInterval(timerInterval);
-            quizTimer.innerHTML = "Time's up!";
+    answerChoices.forEach((choice, index) => {
+        if (currentQuestion.answers[index]) {
+            choice.textContent = currentQuestion.answers[index];
+            choice.parentElement.style.display = ''; 
         } else {
-            progress(timeLeft);
-            timeLeft--;
+            choice.parentElement.style.display = 'none'; 
         }
-    }, 1000);
+    });
+
+    startTimer();
 }
 
-const newGame= document.getElementById('new');
-newGame.addEventListener('click', () => startTimer());
+function progress(time) {
+        const percentage = (time / selectedTime) * 100;
+        quizProgress.style.width = `${percentage}%`;
+        quizTimer.innerHTML = `${time}`;
+    }
+
+    function startTimer(){
+            let timeLeft = selectedTime;
+        
+            timer = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    quizTimer.innerHTML = "Time's up!";
+                } else {
+                    progress(timeLeft);
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+function selectAnswer(index) {
+    const currentQuestion = shuffledQuestions[currentQuestionIndex];
+    if (index === currentQuestion.correct) {
+        score++;
+        alert("Correct!");
+    } else {
+        alert("Wrong answer! The correct answer was: " + currentQuestion.answers[currentQuestion.correct]);
+    }
+    clearInterval(timer);
+    currentQuestionIndex++;
+    if (currentQuestionIndex < shuffledQuestions.length) {
+        displayQuestion();
+    } else {
+        showResults();
+    }
+}
+
+function showResults() {
+    alert(`Quiz Over! Your score: ${score}/${shuffledQuestions.length}`);
+}
+
+answerChoices.forEach((choice, index) => {
+    choice.addEventListener('click', () => selectAnswer(index));
+});
+
+
+window.onload = initializeQuiz;
+
+ 
