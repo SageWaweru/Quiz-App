@@ -18,11 +18,6 @@
               /></a>
             </li>
             <li>
-              <a href="leaderboard.html"
-                ><img src="Images/reward_6339698.png" alt="LEADERBOARD"
-              /></a>
-            </li>
-            <li>
               <a href="instructions.html"
                 ><img src="Images/question_6340565.png" alt="HELP"
               /></a>
@@ -31,59 +26,37 @@
         </ul>
       </nav>
       <div class="questions">
-        <div id="quizHead">
+        <div class="quiz-header">
           <div class="timer">
             <div id="progress">
               <div class="progress-bar"></div>
-              <span class="progress-text">60</span>
+              <div><span class="progress-text" id="time-left"> 30</span></div>
             </div>
           </div>
-          <h2 id="score">200</h2>
-          <div class="q-icon">
-            <span id="hint"
-              ><img src="Images/lamp_6270587.png" alt="hint"
-            /></span>
-            <span id="restart"
-              ><img src="Images/refresh_6339214.png" alt="restart"
-            /></span>
+          <h2 id="question" class="question">Question Text</h2>
+        </div>
+        <div class="answers">
+          <div class="answer-box">
+            <div class="answer">
+              <span class="answer-btn" data-answer="A">Answer A</span>
+            </div>
+          </div>
+          <div class="answer-box">
+            <div class="answer">
+              <span class="answer-btn" data-answer="B">Answer B</span>
+            </div>
+          </div>
+          <div class="answer-box">
+            <div class="answer">
+              <span class="answer-btn" data-answer="C">Answer C</span>
+            </div>
           </div>
         </div>
-        <div class="question-box" id="questionContainer">
-          <div class="number">
-            Question
-            <span class="current-q">1<span class="total-q">/15</span></span>
-          </div>
-          <div class="question">This is a Question</div>
-          <div class="answer-box">
-            <div class="answer" id="selected">
-              <span class="text">answer</span>
-              <span class="checkbox">
-                <span class="icon">✔</span>
-              </span>
-            </div>
-          </div>
-          <div class="answer-box">
-            <div class="answer" id="correct">
-              <span class="text">answer</span>
-              <span class="checkbox">
-                <span class="icon">✔</span>
-              </span>
-            </div>
-          </div>
-          <div class="answer-box">
-            <div class="answer" id="wrong">
-              <span class="text">answer</span>
-              <span class="checkbox">
-                <span class="icon">✔</span>
-              </span>
-            </div>
-          </div>
-          <div class="q-btn">
-            <button class="s-btn">Submit</button>
-            <button class="n-btn">Next</button>
-          </div>
-        </div>
+        <div id="feedback"></div>
+        <button id="next-btn" class="n-btn">Next Question</button>
       </div>
+      <script src="quizquestions.js"></script>
+      <script src="quiz.js"></script>
     </div>
     <script src="quizquestions.js"></script>
     <script src="quiz.js"></script>

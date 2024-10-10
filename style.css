@@ -85,6 +85,7 @@ ul li{
     box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
 } 
 
+
 .h-body{
     display: flex;
     flex-direction: column;
@@ -119,7 +120,54 @@ ul li{
     cursor: pointer;
 }
 
+#startQuizBtn{
+    margin-top: 1rem;
+    background-color: rgb(77, 77, 171);
+    color: bisque;
+    border-radius: .3rem;
+    border: none;
+    width: 15rem;
+    height: 3rem;
+}
 
+#startQuizBtn:hover{
+    background-color: rgb(121, 98, 173);
+    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
+    cursor: pointer;
+}
+
+#difficulty-section{
+    color: bisque;
+    background-color: rgb(77, 77, 171);
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    text-align: center;
+}
+
+.list-unstyled{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.levelbtn{
+    text-decoration: none;
+    color: bisque;
+    background-color: rgb(121, 98, 173);
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+.levelbtn:hover{
+    border:1px solid bisque;
+     background-color: rgb(121, 98, 173);
+    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
+} 
 /* settings styling */
 .settings{
     display: flex;
@@ -290,6 +338,7 @@ ul li{
 .questions{
     display: flex;
     flex-direction: column;
+    margin-left: 2rem;
     /* align-items: center;
     justify-content: center; */
 }
@@ -319,8 +368,8 @@ ul li{
     height:1.5rem;
     border-radius: 1.5rem;
     position: absolute;
-    top: -1rem;
-    left: -1rem;
+    top: .03rem;
+    left: -.03rem;
     background: linear-gradient( to right,#ea517c,#b478f1);
     transition: 1s linear;
 }
@@ -368,49 +417,6 @@ transition: 0.3s linear;
  border: 2px solid rgb(173, 165, 156);
 }
 
-.checkbox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    font-size: 1rem;
-    border: 2px solid rgb(173, 165, 156);
-    border-radius: 50%;
-    width: 1.2rem;
-    height: 1.2rem;
-    
-}
-
-.answer .checkbox .icon{
-    opacity: 0;
-}
-
-#selected .checkbox{
-    background-color: rgb(77, 77, 171);
-    border-color: rgb(77, 77, 171);
-}
-
-#selected .icon{
-    opacity: 1;
-}
-
-.checkbox:hover{
-    background-color: rgb(77, 77, 171);
-    border-color: rgb(77, 77, 171);
-}  
-
-.checkbox .icon:hover{   
-opacity: 1;
-}
-
-#correct{
- border-color: green;
-}
-
-#wrong{
-    border-color: rgb(176, 19, 19);
-}
-
 .question-box{
     margin-left: 3rem;
 }
@@ -421,7 +427,6 @@ opacity: 1;
     justify-content: center;
 }
 
-.s-btn,
 .n-btn{
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -434,35 +439,58 @@ opacity: 1;
     height: 3rem;   
 }
 
-.s-btn:hover{
-    background-color: rgb(121, 98, 173);
-    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
-}
 
 .n-btn:hover{
     background-color: rgb(121, 98, 173);
     box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
 }
 
-/* leaderboard styling */
+/* scoreboard styling */
 
-.leaderboard{
+.scoreboard{
+    background-image: url(Images/quiz-background.jpeg);
+    background-repeat: repeat; 
+    background-size:cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(4, 4, 71);
+    /* background-color: rgb(4, 4, 71); */
     width: 50vw;
+    height: 60vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806); 
+    color: bisque;
+
 }
-.leaderboard img{
+.scoreboard img{
     width: 7%;
     float: right;
     margin-left: .5rem;
 }
+
+
+#p-btn{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    background-color: rgb(77, 77, 171);
+    color: bisque;
+    border-radius: .3rem;
+    border: none;
+    width: 10rem;
+    height: 1.6rem;  
+    text-decoration: none; 
+    text-align: center;
+}
+
+
+#p-btn:hover{
+    background-color: rgb(121, 98, 173);
+    box-shadow: 0 4px 5px rgba(95, 95, 218, 0.5);
+}
+
 
 .ranking{
     margin-top: 2rem;
@@ -497,8 +525,9 @@ opacity: 1;
     align-items: center;
     justify-content: center;
     width: 50vw;
-    height: 70vh;
+    height: 83vh;
     margin-top: 2rem;
+    color: rgb(173, 165, 156);
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806); 
@@ -511,9 +540,15 @@ opacity: 1;
    
 
 }
-   
+  
+.Rules{
+    margin-left: 2rem;
+    margin-right: 2rem;
 
-.instructions h2{
+}
+
+.instructions h2,
+h3{
     color: rgb(142, 66, 157);
 }
 
@@ -546,7 +581,8 @@ opacity: 1;
         width: 75vw;
     }
 
-    .leaderboard{
+    .scoreboard
+{
         width: 100vw;
     }
 
