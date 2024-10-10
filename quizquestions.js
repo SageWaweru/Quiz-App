@@ -1193,7 +1193,7 @@ const questions = {
             }
     
         
-    ];
+    ],
     
     jseasy:[
             {

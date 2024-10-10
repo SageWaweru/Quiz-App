@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="quiz" id="quiz">
-        <nav>
-            <ul>
-                <div>
-                    <li><a href="index.html"><img src="Images/home_6269272.png" alt="HOME"></a></li>
-                    <li><a href="leaderboard.html"><img src="Images/reward_6339698.png" alt="LEADERBOARD"></a></li>
-                    <li><a href="instructions.html"><img src="Images/question_6340565.png" alt="HELP"></a></li>
-                </div>
-            </ul>
-        </nav>
-        <div class="questions">
-            <div id="quizHead">
-                <div class="timer">
-                    <div id="progress">
-                        <div class="progress-bar"></div>
-                        <span class="progress-text">60</span>
-                       
-                    </div>
-                </div>
-                <h2 id="score">200</h2>
-                    <div class="q-icon">
-                      <span id="hint"><img src="Images/lamp_6270587.png" alt="hint"></span>
-                      <span id="restart"><img src="Images/refresh_6339214.png" alt="restart"></span>
-                      </div>
+      <nav>
+        <ul>
+          <div>
+            <li>
+              <a href="index.html"
+                ><img src="Images/home_6269272.png" alt="HOME"
+              /></a>
+            </li>
+            <li>
+              <a href="leaderboard.html"
+                ><img src="Images/reward_6339698.png" alt="LEADERBOARD"
+              /></a>
+            </li>
+            <li>
+              <a href="instructions.html"
+                ><img src="Images/question_6340565.png" alt="HELP"
+              /></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+      <div class="questions">
+        <div id="quizHead">
+          <div class="timer">
+            <div id="progress">
+              <div class="progress-bar"></div>
+              <span class="progress-text">60</span>
             </div>
-           <div class="question-box" id="questionContainer">
-            <!-- <div class="number">
-                Question <span class="current-q">1<span class="total-q">/15</span></span>
-            </div>
-            <div class="question">This is a Question</div>
-            <div class="answer-box">
-                <div class="answer" id="selected">
-                    <span class="text">answer</span>
-                    <span class="checkbox">
-                        <span class="icon">✔</span>
-                    </span>
-                </div>
-            </div>
-            <div class="answer-box">
-                <div class="answer " id="correct">
-                    <span class="text">answer</span>
-                    <span class="checkbox">
-                        <span class="icon">✔</span>
-                    </span>
-                </div>
-            </div>
-            <div class="answer-box">
-                <div class="answer" id="wrong">
-                    <span class="text">answer</span>
-                    <span class="checkbox">
-                        <span class="icon">✔</span>
-                    </span>
-                </div>
-            </div>
-            <div class="q-btn">
-                <button class="s-btn">Submit</button>
-                <button class="n-btn">Next</button>
-            </div>
-           </div> -->
+          </div>
+          <h2 id="score">200</h2>
+          <div class="q-icon">
+            <span id="hint"
+              ><img src="Images/lamp_6270587.png" alt="hint"
+            /></span>
+            <span id="restart"
+              ><img src="Images/refresh_6339214.png" alt="restart"
+            /></span>
+          </div>
         </div>
-
+        <div class="question-box" id="questionContainer">
+          <div class="number">
+            Question
+            <span class="current-q">1<span class="total-q">/15</span></span>
+          </div>
+          <div class="question">This is a Question</div>
+          <div class="answer-box">
+            <div class="answer" id="selected">
+              <span class="text">answer</span>
+              <span class="checkbox">
+                <span class="icon">✔</span>
+              </span>
+            </div>
+          </div>
+          <div class="answer-box">
+            <div class="answer" id="correct">
+              <span class="text">answer</span>
+              <span class="checkbox">
+                <span class="icon">✔</span>
+              </span>
+            </div>
+          </div>
+          <div class="answer-box">
+            <div class="answer" id="wrong">
+              <span class="text">answer</span>
+              <span class="checkbox">
+                <span class="icon">✔</span>
+              </span>
+            </div>
+          </div>
+          <div class="q-btn">
+            <button class="s-btn">Submit</button>
+            <button class="n-btn">Next</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="quizquestions.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
