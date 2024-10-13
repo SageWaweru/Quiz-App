@@ -11,9 +11,34 @@ body{
     margin-bottom: 2rem;
 }
 ul li{
+    display: inline;
+    float: left;
     text-decoration: none;
     list-style-type: none;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-btn{
+    float: left;
+    margin-left: .5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background: linear-gradient( to right,#3F6AFF,#6953FF,#9130F2,#AB2FFF);
+ border: none;
+ border-radius: .5rem;
+ width: 6rem;
+height: 2.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: bisque;
+}
+
 .home{
     background-image: url(Images/homebackground.jpg);
     background-repeat: no-repeat; 
@@ -22,19 +47,69 @@ ul li{
     bottom: 0;
     top: 0;
     width: 50vw;
-    height: 100vh;
+    height: 92vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806);
 }
 
-.home img{
-    width: 7%;
-    float: right;
-    margin-left: .5rem;
-   
+.home nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#homeBright{
+    background-image:url(Images/nrasedrh.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    color: #2b57f8;
+}
 
+#homeBright nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#toggle{
+ display: flex;
+ align-items:center;
+ justify-content: center;
+ 
+}
+
+#bright{
+    background-image:url(Images/vecteezy_white-and-purple-gradient-background_4493324.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    color: #2b57f8;
+    color: #6953FF;
+}
+
+#bright .how,
+#bright .question{
+     color: #2b57f8;
+
+}
+
+#bright .answer,
+#bright .progress-text{
+    /* color:#471a27; */
+    color: rgb(72, 28, 80);
+}
+
+#bright .answer{
+    border-color: rgb(142, 66, 157);
+    
 }
 
 
@@ -93,8 +168,8 @@ ul li{
 }
 
 .h-body h1{
-    color:rgb(142, 66, 157);
-    margin-top: 4rem;
+    color:#AB2FFF;
+    margin-top: 2rem;
 }
 
 .cTopic{
@@ -174,22 +249,15 @@ ul li{
     background-repeat: repeat; 
     background-size:cover;
     width: 50vw;
+    height: 100vh;
     display: flex;
+    overflow-y: visible;
     flex-direction: column;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806);
 }
 
-.quiz nav img{
-    width: 7%;
-    float: right;
-    margin-left: .5rem;
-    margin-top: 0;
-    margin-right: 1rem;
-   
-
-}
 
 #quizHead{
     display: flex;
@@ -254,6 +322,18 @@ ul li{
     color: bisque;
     font-size: 1rem;
     font-weight: 500;
+}
+
+#hint-btn{
+ width: 4rem;
+ margin-left: 1rem;
+ position:absolute;
+ top:10rem;
+ height: 2rem;
+ background: linear-gradient( to right,#3F6AFF,#6953FF,#9130F2,#AB2FFF);
+ border: none;
+ color: bisque;
+ border-radius: .5rem;
 }
 
 .question{
@@ -324,13 +404,14 @@ transition: 0.3s linear;
     color: bisque;
 
 }
-.scoreboard img{
-    width: 7%;
-    float: right;
-    margin-left: .5rem;
+
+.scoreboard li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
 }
-
-
 #p-btn{
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -339,9 +420,10 @@ transition: 0.3s linear;
     border-radius: .3rem;
     border: none;
     width: 10rem;
-    height: 1.6rem;  
+    height: 1.7rem;  
     text-decoration: none; 
     text-align: center;
+    font-size: 1.1rem;
 }
 
 
@@ -360,22 +442,26 @@ transition: 0.3s linear;
     align-items: center;
     justify-content: center;
     width: 50vw;
-    height: 83vh;
     margin-top: 2rem;
-    color: rgb(173, 165, 156);
+    color:bisque;
     margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow:0 4px 5px rgba(64, 64, 179, 0.806); 
 }
-.instructions nav img{
-    width: 7%;
-    float: right;
-    margin-left: .5rem;
-    margin-top: 0;
-   
 
+.instructions ul li{
+   margin-bottom: 2rem;
+   margin-top: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   position:relative;
+   align-items: center;
+   justify-content: center;
+   margin-right: 2rem;
+   
 }
-  
+
 .Rules{
     margin-left: 2rem;
     margin-right: 2rem;
@@ -384,11 +470,11 @@ transition: 0.3s linear;
 
 .instructions h2,
 h3{
-    color: rgb(142, 66, 157);
+    color:#AB2FFF;
 }
 
 .instructions p{
-    color: rgb(173, 165, 156);
+    color:bisque;
     margin: 2rem;
 }
 
@@ -397,7 +483,7 @@ h3{
         width: 100vw;
     }
 
-    #quiz{
+    .quiz{
         width: 100vw;  
     }
 

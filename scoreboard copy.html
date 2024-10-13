@@ -7,21 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scoreboard">
+    <div class="scoreboard" id="bright">
         <nav>
             <ul>
                     <li>
-                        <button class="menu-btn"> <a href="index.html">HOME</a></button>
+                        <button class="menu-btn"> <a href="index copy.html">HOME</a></button>
                       </li>
                       <li>
-                        <a href="instructions.html"
-                          ><button class="menu-btn"><a href="instructions.html">HELP</a></button>
+                          <button class="menu-btn"><a href="instructions copy.html">HELP</a></button>
                       </li>
             </ul>
         </nav>
             <h1>Scoreboard</h1>
             <h2>Your final score: <span id="final-score"></span>/100</h2>
-            <a href="index.html" id="p-btn">PLAY AGAIN</a>
+            <a href="index copy.html" id="p-btn">PLAY AGAIN</a>
     </div>
     <script>
         const finalScore = localStorage.getItem('score') || 0;
