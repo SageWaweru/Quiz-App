@@ -324,6 +324,10 @@ a{
     font-weight: 500;
 }
 
+#bright #hint-btn{
+    top: 8rem;
+}
+
 #hint-btn{
  width: 4rem;
  margin-left: 1rem;
