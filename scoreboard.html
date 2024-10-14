@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scoreboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="scoreboard">
         <nav>
             <ul>
-                    <li>
-                        <button class="menu-btn"> <a href="index.html">HOME</a></button>
-                      </li>
-                      <li>
-                        <a href="instructions.html"
-                          ><button class="menu-btn"><a href="instructions.html">HELP</a></button>
-                      </li>
+                <li>
+                    <button class="menu-btn"> <a href="index.html">HOME</a></button>
+                </li>
+                <li>
+                    <a href="instructions.html"><button class="menu-btn"><a href="instructions.html">HELP</a></button>
+                </li>
             </ul>
         </nav>
-            <h1>Scoreboard</h1>
-            <h2>Your final score: <span id="final-score"></span>/100</h2>
-            <a href="index.html" id="p-btn">PLAY AGAIN</a>
+        <h1>Scoreboard</h1>
+        <h2>Your final score: <span id="final-score"></span>/100</h2>
+        <a href="index.html" id="p-btn">PLAY AGAIN</a>
     </div>
     <script>
         const finalScore = localStorage.getItem('score') || 0;
         document.getElementById('final-score').textContent = finalScore;
     </script>
 </body>
+
 </html>

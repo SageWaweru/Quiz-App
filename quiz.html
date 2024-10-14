@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="quiz" id="quiz">
-      <nav>
-        <ul>
-          <div>
-            <li>
-              <button class="menu-btn"> <a href="index.html">HOME</a></button>
-            </li>
-            <li>
-              <a href="instructions.html"
-                ><button class="menu-btn"><a href="instructions.html">HELP</a></button>
-            </li>
-          </div>
-        </ul>
-      </nav>
-      <div class="questions">
-        <div class="quiz-header">
-          <div class="timer">
-            <div id="progress">
-              <div class="progress-bar"></div>
-              <div><span class="progress-text" id="time-left"> 30</span></div>
-            </div>
-            <div><button id="hint-btn">HINT</button></div>
-          </div>
-          <h2 id="question" class="question">Question Text</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="quiz" id="quiz">
+    <nav>
+      <ul>
+        <div>
+          <li>
+            <button class="menu-btn"> <a href="index.html">HOME</a></button>
+          </li>
+          <li>
+            <a href="instructions.html"><button class="menu-btn"><a href="instructions.html">HELP</a></button>
+          </li>
         </div>
-        <div class="answers">
-          <div class="answer-box">
-            <div class="answer">
-              <span class="answer-btn" data-answer="A">Answer A</span>
-            </div>
+      </ul>
+    </nav>
+    <div class="questions">
+      <div class="quiz-header">
+        <div class="timer">
+          <div id="progress">
+            <div class="progress-bar"></div>
+            <div><span class="progress-text" id="time-left"> 30</span></div>
           </div>
-          <div class="answer-box">
-            <div class="answer">
-              <span class="answer-btn" data-answer="B">Answer B</span>
-            </div>
-          </div>
-          <div class="answer-box">
-            <div class="answer">
-              <span class="answer-btn" data-answer="C">Answer C</span>
-            </div>
-          </div>
+          <div><button id="hint-btn">HINT</button></div>
         </div>
-        <div id="feedback"></div>
-        <button id="next-btn" class="n-btn">Next Question</button>
+        <h2 id="question" class="question">Question Text</h2>
       </div>
-      <script src="quizquestions.js"></script>
-      <script src="quiz.js"></script>
+      <div class="answers">
+        <div class="answer-box">
+          <div class="answer">
+            <span class="answer-btn" data-answer="A">Answer A</span>
+          </div>
+        </div>
+        <div class="answer-box">
+          <div class="answer">
+            <span class="answer-btn" data-answer="B">Answer B</span>
+          </div>
+        </div>
+        <div class="answer-box">
+          <div class="answer">
+            <span class="answer-btn" data-answer="C">Answer C</span>
+          </div>
+        </div>
+      </div>
+      <div id="feedback"></div>
+      <button id="next-btn" class="n-btn">Next Question</button>
     </div>
     <script src="quizquestions.js"></script>
     <script src="quiz.js"></script>
-  </body>
+  </div>
+  <script src="quizquestions.js"></script>
+  <script src="quiz.js"></script>
+</body>
+
 </html>
